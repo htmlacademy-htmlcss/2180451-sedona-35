@@ -2,11 +2,91 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header>
+      <nav class="header-navigation">
+        <img class="header-logo" src="/images/header-logo.svg" width="140" height="70" alt="Логотип города Седона">
+        <div class="nav-menu">
+          <a href="#">Главная</a>
+          <a href="#">О Седоне</a>
+          <a href="#">Гостиницы</a>
+        </div>
+        <div class="nav-right">
+          <img class="search-icon" src="search-btn.png" width="44" height="64">
+          <img class="like-icon" src="like-btn.png" width="44" height="64">
+          <button>ХОЧУ СЮДА!</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <h3>WELCOME</h3>
+        <p>to the gorgeous<p>
+        <h2>SEDONA</h2>
+        <p>Because the Grand Canyon sucks!<p>
+        <p>Седона - небольшой городок в аризоне, заслуживающий большего!</p>
+        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+    </main>
+    <section class="advantages">
+      <div>
+        <h4>Настоящий городок</h4>
+        <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+      </div>
+      <div>
+        <img src="/images/photo-1.jpg" alt="Фото здания">
+      </div>
+      <div>
+        <h4>Небольшая площадь</h4>
+        <p>Все достопримечательности находятся очень близко</p>
+      </div>
+      <div>
+        <h4>Красивая дорога</h4>
+        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+      <div>
+        <h4>Мало туристов</h4>
+        <p>Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
+      <div>
+        <img src="/images/photo-2.jpg" alt="Каньон на фоне гор">
+      </div>
+      <div>
+        <h4>Там есть мост дьявола</h4>
+        <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+      </div>
+      <div>
+        <h4>Жильё</h4>
+        <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+      </div>
+      <div>
+        <h4>Еда</h4>
+        <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+      <div>
+        <h4>Сувениры</h4>
+        <p>Не только китайского, но и настоящего местного производства!</p>
+      </div>
+    </section>
+    <section class="hotel-search">
+      <h3>Заинтересовались?</h3>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <button>Поиск гостиницы в Седоне</button>
+    </section>
+    <section class="mailing-list">
+      <h3>Подпишитесь на рассылку</h3>
+      <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <input type="text" value="Ваш e-mail" class="mail-input">
+      <button class="subscribe-button">ПОДПИСАТЬСЯ</button>
+    </section>
+    <footer class="page-footer">
+      <img src="/images/vk-logo.png" alt="Логотип Вконтакте">
+      <img src="/images/telegram-logo.png" alt="Логотип Телеграм">
+      <img src="/images/youtube-logo.png" alt="Логотип Ютуб">
+      <a href="telto:+78128121212">+7 (812) 812-12-12</a>
+      <img src="/images/HTML-Academy-logo.png" alt="Логотип HTML Академии">
+    </footer>
   </body>
 </html>
