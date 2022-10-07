@@ -26,14 +26,14 @@
         <ul class="nav-user list">
           <li class="nav-user-item">
             <span class="visually-hidden">Поиск гостиницы</span>
-            <img class="search-icon" src="images/search-btn.svg" width="18" height="18" alt="Поиск.">
+            <a class="search-btn link" href="catalog.html"></a>
           </li>
           <li class="nav-user-item favorites-count">
             <span class="visually-hidden">Избранное</span>
-            <img class="favorites-icon" src="images/favorites-btn.svg" width="18" height="18" alt="Избранное.">
+            <a class="favorite-btn link"></a>
           </li>
           <li class="nav-user-item">
-            <button class="favorites-hotel-button" type="button">ХОЧУ СЮДА!</button>
+            <a class="favorites-hotel-button link" href="#">ХОЧУ СЮДА!</a>
           </li>
         </ul>
       </nav>
@@ -132,15 +132,15 @@
           <option value="option-value">Сначала дорогие</option>
         </select>
         <div class="hotel-sort-wrapper">
-          <a href="#" class="view-btn view-btn-cards view-btn-cards-current link">
+          <button href="#" class="view-btn view-btn-cards view-btn-cards-current link">
             <span class="visually-hidden">Показать в виде карточек</span>
-          </a>
-          <a href="#" class="view-btn view-btn-gallery link">
+          </button>
+          <button href="#" class="view-btn view-btn-gallery">
             <span class="visually-hidden">Показать в виде галереи</span>
-          </a>
-          <a href="#" class="view-btn view-btn-list link">
+          </button>
+          <button href="#" class="view-btn view-btn-list">
             <span class="visually-hidden">Показать в виде списка</span>
-          </a>
+          </button>
         </div>
       </section>
 
@@ -160,7 +160,7 @@
              <button class="add-favorites-btn">В избранное</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <div class="hotel-rate-star hotel-rate"></div>
+              <span class="hotel-rate-star hotel-rate"></span>
               <p class="hotel-rate-number hotel-rate">Рейтинг: 8,5</p>
             </div>
           </li>
@@ -178,7 +178,7 @@
               <button class="add-favorites-btn added-favorites-btn">В избранном</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <div class="hotel-rate-star hotel-rate"></div>
+              <span class="hotel-rate-star hotel-rate"></span>
               <p class="hotel-rate-number hotel-rate">Рейтинг: 9,2</p>
             </div>
           </li>
@@ -196,7 +196,7 @@
               <button class="add-favorites-btn">В избранное</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <div class="hotel-rate-star hotel-rate three-star"></div>
+              <span class="hotel-rate-star hotel-rate three-star"></span>
               <p class="hotel-rate-number hotel-rate">Рейтинг: 6,9</p>
             </div>
           </li>
@@ -214,7 +214,7 @@
               <button class="add-favorites-btn">В избранное</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <div class="hotel-rate-star hotel-rate two-star"></div>
+              <span class="hotel-rate-star hotel-rate two-star"></span>
               <p class="hotel-rate-number hotel-rat">Рейтинг: 5,0</p>
             </div>
           </li>
@@ -241,9 +241,6 @@
           </li>
         </ul>
       </section>
-
-
-
 
       <section class="mailing-list inner-mailing-list">
         <h2 class="inner-subscribe-title subscribe-title">Подпишитесь на рассылку</h2>
