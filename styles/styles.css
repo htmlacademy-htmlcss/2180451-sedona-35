@@ -51,7 +51,7 @@ body {
 
 .header-logo {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
 }
 
 .nav-list {
@@ -76,7 +76,7 @@ body {
   width: 100%;
   top: 43px;
   border-bottom: 2px solid #756257;
-  z-index: 1;
+  z-index: 3;
 }
 
 .nav-user {
@@ -134,32 +134,30 @@ body {
 /* main */
 /* welcome-intro */
 .background-intro {
+  position: relative;
   width: 100%;
   height: 485px;
+  text-align: center;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 2;
 }
 
-.background-intro::before {
-  content: "";
-  position: absolute;
-  width: 1200px;
-  height: 485px;
-  background-image: url("../images/welcome-intro.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  z-index: 2;
+.welcome-intro-img {
+  margin-top: 51px;
 }
 
 .background-intro::after {
   content: "";
   position: absolute;
-  width: 1200px;
-  height: 485px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 57px;
   background-image: url("../images/intro-lowercase.svg");
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  z-index: 1;
 }
 
 .main-title {

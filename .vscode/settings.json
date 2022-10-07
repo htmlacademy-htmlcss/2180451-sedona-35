@@ -1,5 +1,5 @@
 {
-  "editor.renderWhitespace": "selection",
+  "editor.renderWhitespace": "none",
   "files.exclude": {
       "*:Zone.Identifier": true,
       "node_modules/": true
