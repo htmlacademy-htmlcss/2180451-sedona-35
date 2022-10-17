@@ -62,20 +62,23 @@
               <ul class="fieldset-form-list list">
                 <li class="infrastructure-list-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="infrastructure-group" value="swimming-pool" checked>
-                    Бассейн
+                    <input class="checkbox" type="checkbox" name="infrastructure-group" value="swimming-pool" checked>
+                    <span class="checkbox-fake"></span>
+                    <span class="checkbox-text">Бассейн</span>
                   </label>
                 </li>
                 <li class="infrastructure-list-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="infrastructure-group" value="parking" checked>
-                    Парковка
+                    <input class="checkbox" type="checkbox" name="infrastructure-group" value="parking" checked>
+                    <span class="checkbox-fake"></span>
+                    <span class="checkbox-text">Парковка</span>
                   </label>
                 </li>
                 <li class="infrastructure-list-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="infrastructure-group" value="wi-fi">
-                    Wi-Fi
+                    <input class="checkbox" type="checkbox" name="infrastructure-group" value="wi-fi">
+                    <span class="checkbox-fake"></span>
+                    <span class="checkbox-text">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
@@ -86,19 +89,19 @@
               <ul class="fieldset-form-list list">
                 <li class="housing-type-list-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="housing-type-group" value="hotel" checked>
+                    <input class="radio" type="radio" name="housing-type-group" value="hotel" checked>
                     Гостиница
                   </label>
                 </li>
                 <li class="housing-type-list-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="housing-type-group" value="motel">
+                    <input class="radio" type="radio" name="housing-type-group" value="motel">
                     Мотель
                   </label>
                 </li>
                 <li class="housing-type-list-item">
                   <label class="control">
-                    <input class="control-input" id="control-input" type="radio" name="housing-type-group" value="apartments">
+                    <input class="radio" id="control-input" type="radio" name="housing-type-group" value="apartments">
                     Апартаменты
                   </label>
                 </li>
@@ -170,8 +173,8 @@
              <button class="add-favorites-btn">В избранное</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <span class="hotel-rate-star hotel-rate"></span>
-              <p class="hotel-rate-number hotel-rate">Рейтинг: 8,5</p>
+              <span class="hotel-rate-star"></span>
+              <p class="hotel-rate-number">Рейтинг: 8,5</p>
             </div>
           </li>
           <li class="hotel-card">
@@ -188,8 +191,8 @@
               <button class="add-favorites-btn added-favorites-btn">В избранном</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <span class="hotel-rate-star hotel-rate"></span>
-              <p class="hotel-rate-number hotel-rate">Рейтинг: 9,2</p>
+              <span class="hotel-rate-star"></span>
+              <p class="hotel-rate-number">Рейтинг: 9,2</p>
             </div>
           </li>
           <li class="hotel-card">
@@ -206,8 +209,8 @@
               <button class="add-favorites-btn">В избранное</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <span class="hotel-rate-star hotel-rate three-star"></span>
-              <p class="hotel-rate-number hotel-rate">Рейтинг: 6,9</p>
+              <span class="hotel-rate-star three-star"></span>
+              <p class="hotel-rate-number">Рейтинг: 6,9</p>
             </div>
           </li>
           <li class="hotel-card">
@@ -224,15 +227,15 @@
               <button class="add-favorites-btn">В избранное</button>
             </div>
             <div class="hotel-rate-wrapper">
-              <span class="hotel-rate-star hotel-rate two-star"></span>
-              <p class="hotel-rate-number hotel-rat">Рейтинг: 5,0</p>
+              <span class="hotel-rate-star two-star"></span>
+              <p class="hotel-rate-number">Рейтинг: 5,0</p>
             </div>
           </li>
         </ul>
 
         <ul class="pagination-list list">
-          <li class="pagination-item pagination-item-current">
-            <a class="pagination-link link" href="#">1</a>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-link-current link" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link link" href="#">2</a>
@@ -243,8 +246,8 @@
           <li class="pagination-item">
             <a class="pagination-link link" href="#">4</a>
           </li>
-          <li class="pagination-item pagination-item-empty">
-            <a class="pagination-link link">...</a>
+          <li class="pagination-item">
+            <a class="pagination-link-empty link">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link link" href="#">10</a>
