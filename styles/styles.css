@@ -74,6 +74,7 @@ body {
 .nav-link {
   padding: 20px 0;
 }
+
 .nav-link-current::after {
   content: "";
   position: absolute;
@@ -146,7 +147,7 @@ body {
   margin-bottom: 69px;
   position: relative;
   display: block;
-  height: 485px;
+  min-height: 485px;
   text-align: center;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
@@ -288,9 +289,8 @@ body {
 
 .hotel-search-btn {
   margin: 0 auto;
-  padding: 8px 0;
-  display: block;
-  width: 376px;
+  padding: 8px 50px;
+  display: inline-block;
   line-height: 36px;
   font-size: 20px;
   font-weight: 700;
@@ -357,12 +357,13 @@ body {
   margin: 0;
   padding: 8px 0;
   width: 232px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border: none;
   border-radius: 0 4px 4px 0;
 }
@@ -521,46 +522,8 @@ body {
   line-height: 23px;
 }
 
-.checkbox {
-  display: none;
-}
-
-.checkbox-fake {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  border-radius: 4px;
-}
-
-.checkbox-fake::before {
-  content: "";
-  position: absolute;
-  display: block;
-  align-self: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-image: url(../images/catalog-page/checkbox.svg);
-  background-size: 12px 10px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 0;
-  transition: 0,2s;
-}
-
-.checkbox:checked + .checkbox-fake::before {
-  opacity: 1;
-}
-
-.checkbox-text {
-  margin-left: 16px;
-  display: inline-block;
-  font-size: 18px;
-  line-height: 23px;
+.control-input {
+  margin: 0;
 }
 
 .range-form {
@@ -601,7 +564,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border: none;
   border-radius: 4px;
 }
@@ -683,19 +646,16 @@ body {
 
 /* hotel-catalog */
 .hotel-list {
-  margin: 40px 70px 60px;
+  margin: 40px 70px 80px;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .hotel-card {
-  margin-bottom: 20px;
   padding: 20px;
-  width: 300px;
-  height: 398px;
+  min-width: 300px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
@@ -750,13 +710,13 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border: none;
   border-radius: 4px;
 }
 
 .added-favorites-btn {
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
 .hotel-rate-wrapper {
@@ -807,7 +767,7 @@ body {
   position: absolute;
   width: 100%;
   top: -40px;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #e6e6e6;
   z-index: 1;
 }
 
@@ -829,7 +789,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   border-radius: 4px;
 }
 
@@ -839,18 +799,10 @@ body {
 
 .pagination-link-current {
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .pagination-link-empty {
-  display: block;
-  box-sizing: border-box;
-  padding: 12px 24px;
-  width: 60px;
-  height: 60px;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
 }

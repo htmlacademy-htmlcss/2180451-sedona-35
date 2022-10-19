@@ -12,7 +12,9 @@
         <!-- header -->
     <header class="page-header">
       <nav class="header-navigation">
-        <a class="link" href="index.html"><img class="header-logo" src="images/sedona-logo.svg" alt="Логотип города Седона."></a>
+        <a class="link" href="index.html">
+          <img class="header-logo" src="images/sedona-logo.svg" alt="Логотип города Седона.">
+        </a>
         <ul class="nav-list list">
           <li class="nav-item">
             <a class="nav-link link" href="index.html">Главная</a>
@@ -62,23 +64,20 @@
               <ul class="fieldset-form-list list">
                 <li class="infrastructure-list-item">
                   <label class="control">
-                    <input class="checkbox" type="checkbox" name="infrastructure-group" value="swimming-pool" checked>
-                    <span class="checkbox-fake"></span>
-                    <span class="checkbox-text">Бассейн</span>
+                    <input class="control-input" type="checkbox" name="infrastructure-group" value="swimming-pool" checked>
+                    Бассейн
                   </label>
                 </li>
                 <li class="infrastructure-list-item">
                   <label class="control">
-                    <input class="checkbox" type="checkbox" name="infrastructure-group" value="parking" checked>
-                    <span class="checkbox-fake"></span>
-                    <span class="checkbox-text">Парковка</span>
+                    <input class="control-input" type="checkbox" name="infrastructure-group" value="parking">
+                    Парковка
                   </label>
                 </li>
                 <li class="infrastructure-list-item">
                   <label class="control">
-                    <input class="checkbox" type="checkbox" name="infrastructure-group" value="wi-fi">
-                    <span class="checkbox-fake"></span>
-                    <span class="checkbox-text">Wi-Fi</span>
+                    <input class="control-input" type="checkbox" name="infrastructure-group" value="wi-fi">
+                    Wi-Fi
                   </label>
                 </li>
               </ul>
@@ -118,7 +117,7 @@
                   <input class="range-input right-range-input" type="text" value="9000" name="max-price">
                 </label>
               </div>
-              <div class="range-scale">
+              <!-- <div class="range-scale">
                 <div class="range-bar" style="left: 42px; width: 136px">
                   <button class="range-toggle toggle-min">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
@@ -126,7 +125,7 @@
                   <button class="range-toggle toggle-max">
                     <span class="visually-hidden">Изменить максимальную цену.</span>
                   </button>
-                </div>
+                </div> -->
             </fieldset>
 
             <div class="hotel-filters-btn">
@@ -247,7 +246,7 @@
             <a class="pagination-link link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link-empty link">...</a>
+            <a class="pagination-link pagination-link-empty link">...</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link link" href="#">10</a>
