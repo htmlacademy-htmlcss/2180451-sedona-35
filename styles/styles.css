@@ -513,6 +513,7 @@ body {
 }
 
 .range-wrapper {
+  position: relative;
   margin-top: 32px;
   width: 288px;
   display: flex;
@@ -521,7 +522,8 @@ body {
 
 .range-input {
   padding: 12px 20px;
-  width: 103px;
+  box-sizing: border-box;
+  width: 143px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -530,6 +532,30 @@ body {
 
 .left-range-input {
   border-radius: 4px 0 0 4px;
+}
+
+.range-wrapper::after {
+  position: absolute;
+  content: "от";
+  top: 12px;
+  left: 106px;
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #e5e5e5;
+}
+
+.range-wrapper::before {
+  position: absolute;
+  content: "до";
+  top: 12px;
+  left: 248px;
+  font-family: 'PT Sans';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #e5e5e5;
 }
 
 .right-range-input {
@@ -883,6 +909,34 @@ body {
 .academy-icon:active {
   fill: #756157;
   opacity: 0.3;
+}
+
+.range-input:hover {
+  background-color: #e6e6e6;
+}
+
+.left-range-input:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+  border-radius: 4px 0 0 4px;
+}
+
+.left-range-input:active {
+  background-color: #f2f2f2;
+  border: 2px solid #000000;
+  border-radius: 4px 0 0 4px;
+}
+
+.right-range-input:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+  border-radius: 0 4px 4px 0;
+}
+
+.right-range-input:active {
+  background-color: #f2f2f2;
+  border: 2px solid #000000;
+  border-radius: 0 4px 4px 0;
 }
 
 .reset-filters-btn:hover {
