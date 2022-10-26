@@ -170,6 +170,7 @@ body {
   height: 57px;
   background-image: url("../images/intro-lowercase.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -384,39 +385,13 @@ body {
   min-width: 142px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.footer-link-vk {
-  display: block;
-  padding: 20px;
-  background-image: url("../images/vk-logo.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.footer-link-tg {
-  display: block;
-  padding: 20px;
-  background-image: url("../images/tg-logo.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.footer-link-yt {
-  display: block;
-  padding: 20px;
-  background-image: url("../images/yt-logo.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.footer-link-htmlacademy {
-  display: block;
-  width: 115px;
-  height: 33px;
-  background-image: url("../images/html-logo.svg");
+.social-icon {
+  padding: 12px 12px;
+  fill: #83b3d3;
 }
 
 .footer-phone-number {
@@ -425,6 +400,10 @@ body {
   padding: 0;
   font-size: 40px;
   line-height: 40px;
+}
+
+.academy-icon {
+  fill: #000000;
 }
 /* page-footer */
 
@@ -474,10 +453,11 @@ body {
   background-size: cover;
 }
 
-.breadcrumps-homepage-link::after {
+.breadcrumps-item:first-child:after {
   content: "";
   position: absolute;
   left: 23px;
+  top: 0;
   width: 7px;
   height: 10px;
   background-image: url("../images/catalog-page/next-icon.svg");
@@ -804,8 +784,18 @@ body {
 }
 
 .pagination-link-empty {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
+  border-radius: 4px;;
 }
 /* pagination-list */
 
@@ -816,4 +806,153 @@ body {
 
 .inner-subscribe-description {
   color: #333333;
+}
+
+/* btn-status */
+.btn-blue:hover {
+  background-color: #68a2ca;
+}
+
+.btn-blue:focus {
+  background-color: #68a2ca;
+}
+
+.btn-blue:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.btn-blue:disabled {
+  background-color: #e5e5e5;
+}
+
+.btn-brown:hover {
+  background-color: #615048;
+}
+
+.btn-brown:focus {
+  background-color: #615048;
+}
+
+.btn-brown:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.btn-brown:disabled {
+  background-color: #e5e5e5;
+}
+
+.social-icon:hover {
+  fill: #68a2ca;
+}
+
+.social-icon:focus {
+  fill: #68a2ca;
+}
+
+.social-icon:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-phone-number:hover {
+  color: #756157;
+}
+
+.footer-phone-number:focus {
+  color: #756157;
+}
+
+.footer-phone-number:active {
+  fill: #756157;
+  opacity: 0.3;
+}
+
+.academy-icon:hover {
+  fill: #756157;
+}
+
+.academy-icon:focus {
+  fill: #756157;
+}
+
+.academy-icon:active {
+  fill: #756157;
+  opacity: 0.3;
+}
+
+.reset-filters-btn:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.reset-filters-btn:focus {
+  border: 3px solid #82b3d3;
+  border-radius: 4px;
+}
+
+.reset-filters-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.reset-filters-btn:disabled {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.view-btn:hover {
+  border: 2px solid #000000;
+}
+
+.view-btn:focus {
+  border: 2px solid #68a2ca;
+}
+
+.view-btn:active {
+  border: 2px solid #000000;
+}
+
+.added-favorites-btn:hover {
+  background-color: #6c9e42;
+}
+
+.added-favorites-btn:focus {
+  background-color: #6c9e42;
+}
+
+.added-favorites-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #7db54f;
+}
+
+.added-favorites-btn:disabled {
+  background-color: #e5e5e5;
+}
+
+.pagination-link:hover {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link:focus {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.pagination-link-current:hover {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.pagination-link-current:focus {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.pagination-link-current:active {
+  background-color: #f2f2f2;
+  border: none;
 }
