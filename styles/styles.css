@@ -170,6 +170,7 @@ body {
   height: 57px;
   background-image: url("../images/intro-lowercase.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -384,39 +385,13 @@ body {
   min-width: 142px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.footer-link-vk {
-  display: block;
-  padding: 20px;
-  background-image: url("../images/vk-logo.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.footer-link-tg {
-  display: block;
-  padding: 20px;
-  background-image: url("../images/tg-logo.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.footer-link-yt {
-  display: block;
-  padding: 20px;
-  background-image: url("../images/yt-logo.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.footer-link-htmlacademy {
-  display: block;
-  width: 115px;
-  height: 33px;
-  background-image: url("../images/html-logo.svg");
+.social-icon {
+  padding: 12px 12px;
+  fill: #83b3d3;
 }
 
 .footer-phone-number {
@@ -425,6 +400,10 @@ body {
   padding: 0;
   font-size: 40px;
   line-height: 40px;
+}
+
+.academy-icon {
+  fill: #000000;
 }
 /* page-footer */
 
@@ -474,13 +453,14 @@ body {
   background-size: cover;
 }
 
-.breadcrumps-homepage-link::after {
+.breadcrumps-item:first-child:after {
   content: "";
   position: absolute;
   left: 23px;
+  top: 0;
   width: 7px;
   height: 10px;
-  background-image: url("../images/catalog-page/next-icon.svg");
+  background-image: url("../images/catalog-page/breadscrump-arrow.svg");
   background-size: cover;
 }
 /* sedona-hotels */
@@ -523,8 +503,63 @@ body {
   line-height: 23px;
 }
 
-.control-input {
-  margin: 0;
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-input,
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.control-mark-checkbox {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark-checkbox::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 4px;
+  height: 20px;
+  width: 20px;
+  background: url(../images/catalog-page/checkbox.svg) no-repeat;
+}
+
+.control-mark-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.radio[type="radio"]:checked + .control-mark-radio::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
 }
 
 .range-form {
@@ -533,7 +568,9 @@ body {
 }
 
 .range-wrapper {
+  position: relative;
   margin-top: 32px;
+  margin-bottom: 36px;
   width: 288px;
   display: flex;
   justify-content: space-between;
@@ -541,7 +578,8 @@ body {
 
 .range-input {
   padding: 12px 20px;
-  width: 103px;
+  box-sizing: border-box;
+  width: 143px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -550,6 +588,30 @@ body {
 
 .left-range-input {
   border-radius: 4px 0 0 4px;
+}
+
+.range-wrapper::after {
+  position: absolute;
+  content: "от";
+  top: 12px;
+  left: 106px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #e5e5e5;
+}
+
+.range-wrapper::before {
+  position: absolute;
+  content: "до";
+  top: 12px;
+  left: 248px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #e5e5e5;
 }
 
 .right-range-input {
@@ -568,6 +630,42 @@ body {
   background-color: #82b3d3;
   border: none;
   border-radius: 4px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  left: 0;
+  width: 226px;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  background-color: #ffffff;
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 206px;
 }
 
 .reset-filters-btn {
@@ -604,10 +702,19 @@ body {
   margin: 0;
   margin-left: auto;
   padding: 10px;
+  padding-right: 34px;
   width: 292px;
   height: 49px;
-  font-size: 14px;
-  line-height: 20px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  background-image: url(../images/catalog-page/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  appearance: none;
 }
 
 .hotel-sort-wrapper {
@@ -804,8 +911,18 @@ body {
 }
 
 .pagination-link-empty {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
+  border-radius: 4px;;
 }
 /* pagination-list */
 
@@ -816,4 +933,174 @@ body {
 
 .inner-subscribe-description {
   color: #333333;
+}
+
+/* btn-status */
+.btn-blue:hover,
+.btn-blue:focus {
+  background-color: #68a2ca;
+}
+
+.btn-blue:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.btn-blue:disabled,
+.btn-brown:disabled {
+  background-color: #e5e5e5;
+}
+
+.btn-brown:hover,
+.btn-brown:focus {
+  background-color: #615048;
+}
+
+.btn-brown:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  fill: #68a2ca;
+}
+
+.social-icon:active {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-phone-number:hover,
+.footer-phone-number:focus {
+  color: #756157;
+}
+
+.footer-phone-number:active {
+  color: #756157;
+  opacity: 0.3;
+}
+
+.academy-icon:hover,
+.academy-icon:focus {
+  fill: #756157;
+}
+
+.academy-icon:active {
+  fill: #756157;
+  opacity: 0.3;
+}
+
+.range-input:hover {
+  background-color: #e6e6e6;
+}
+
+.left-range-input:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+  border-radius: 4px 0 0 4px;
+}
+
+.left-range-input:active {
+  background-color: #f2f2f2;
+  border: 2px solid #000000;
+  border-radius: 4px 0 0 4px;
+}
+
+.right-range-input:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+  border-radius: 0 4px 4px 0;
+}
+
+.right-range-input:active {
+  background-color: #f2f2f2;
+  border: 2px solid #000000;
+  border-radius: 0 4px 4px 0;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  border: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2x solid #83b3d3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.reset-filters-btn:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.reset-filters-btn:focus {
+  border: 3px solid #82b3d3;
+  border-radius: 4px;
+}
+
+.reset-filters-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.reset-filters-btn:disabled {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.hotel-sort-list:hover,
+.hotel-sort-list:focus {
+  border: 2px solid #68a2ca;
+}
+
+.hotel-sort-list:active {
+  border: 2px solid #3f5e72;
+}
+
+.hotel-sort-list:disabled {
+  color: #000000 ;
+  opacity: 0.3;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.view-btn:hover,
+.view-btn:active {
+  border: 2px solid #000000;
+}
+
+.view-btn:focus {
+  border: 2px solid #68a2ca;
+}
+
+.added-favorites-btn:hover,
+.added-favorites-btn:focus {
+  background-color: #6c9e42;
+}
+
+.added-favorites-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #7db54f;
+}
+
+.added-favorites-btn:disabled {
+  background-color: #e5e5e5;
+}
+
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.pagination-link-current:hover,
+.pagination-link-current:focus,
+.pagination-link-current:active {
+  background-color: #f2f2f2;
+  border: none;
 }
