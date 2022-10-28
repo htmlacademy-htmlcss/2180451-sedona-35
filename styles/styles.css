@@ -1396,8 +1396,6 @@ body {
 .adults-count-wrapper:hover .adults-count-input,
 .adults-count-wrapper:focus .adults-count-input {
   background-color: #e6e6e6;
-} {
-  background-color: #e6e6e6;
 }
 
 .childs-count-wrapper:hover .childs-count-input,
