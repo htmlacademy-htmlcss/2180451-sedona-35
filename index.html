@@ -144,7 +144,7 @@
       </a>
     </footer>
         <!-- modal-container -->
-    <div class="modal-container">
+    <div class="modal-container modal-container-close">
       <div class="modal-wrapper">
         <button class="modal-close-btn">
           <span class="visually-hidden">Закрыть</span>
@@ -153,18 +153,34 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-field" action="https://echo.htmlacademy.ru/" method="post">
             <label class="arrival-date" for="arrival-date-input">Дата Заезда:</label>
-            <input type="text" placeholder="27 апреля 2020" class="arrival-date-input modal-input" id="arrival-date-input" name="arrival date">
+            <input class="arrival-date-input modal-input" type="text" value="27 апреля 2020" id="arrival-date-input" name="arrival date" required>
             <label class="departure-date" for="departure-date-input">Дата Выезда:</label>
-            <input type="text" placeholder="1 сентября 2023" class="departure-date-input modal-input" id="departure-date-input" name="departure date">
+            <input class="departure-date-input modal-input" type="text" value="1 сентября 2023" id="departure-date-input" name="departure date" required>
             <label class="adults-count" for="adult-count-input">Взрослые:</label>
-            <input type="text" placeholder="2" class="adults-count-input modal-input" id="adult-count-input" name="adults count">
+            <div class="adults-count-wrapper">
+              <button class="minus-btn">
+                <span class="visually-hidden">Минус</span>
+              </button>
+              <input class="adults-count-input modal-input" type="text" value="2" id="adult-count-input" name="adults count" required>
+              <button class="plus-btn">
+                <span class="visually-hidden">Плюс</span>
+              </button>
+            </div>
             <label class="childs-count" for="childs-count-input">
               Дети:
               <div class="tooltip">
                 <span class="tooltip-text">Укажите количество детей,<br> которые будут с вами, возраст<br> которых от 6 до 18 лет. Дети<br> до 6 лет размещаются<br> бесплатно.</span>
               </div>
             </label>
-            <input type="text" placeholder="2" class="childs-count-input modal-input" id="childs-count-input" name="childs count">
+            <div class="childs-count-wrapper">
+              <button class="minus-btn" type="button">
+                <span class="visually-hidden">Минус</span>
+              </button>
+              <input class="childs-count-input modal-input" type="text" value="2" id="childs-count-input" name="childs count" required>
+              <button class="plus-btn" type="button">
+                <span class="visually-hidden">Плюс</span>
+              </button>
+            </div>
             <button class="modal-search-btn" type="submit">Найти</button>
           </form>
         </section>

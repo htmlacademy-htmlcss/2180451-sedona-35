@@ -419,6 +419,10 @@ body {
   z-index: 4;
 }
 
+/* .modal-container-close {
+  display: none;
+} */
+
 .modal-wrapper {
   position: relative;
   margin: auto;
@@ -466,7 +470,6 @@ body {
 }
 
 .modal-input {
-  padding: 12px 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -476,8 +479,33 @@ body {
   border-radius: 4px;
 }
 
-.modal-field input::-webkit-input-placeholder {
-  color: #000000;
+.arrival-date::after {
+  position: absolute;
+  content: "Мы не можем отправить вас в прошлое.";
+  width: 280px;
+  left: 157px;
+  top: 40px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #FF5757;
+}
+
+.departure-date::after {
+  position: absolute;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  width: 331px;
+  left: 157px;
+  top: 40px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.arrival-date-input,
+.departure-date-input {
+  padding: 12px 20px;
 }
 
 .arrival-date,
@@ -485,6 +513,7 @@ body {
 .adults-count,
 .childs-count {
   align-self: center;
+  position: relative;
 }
 
 .arrival-date,
@@ -501,22 +530,64 @@ body {
   background-position: center right 20px;
 }
 
-.adults-count-input,
-.childs-count-input {
-  padding-left: 50px;
-  background:
-  url("../images/modal-minus.svg") no-repeat 0 50%,
-  url("../images/modal-plus.svg") no-repeat 100% 50%;
-  background-color: #f2f2f2;
-}
-
 .childs-count {
   margin-left: 88px;
   grid-column: 3/4;
 }
 
+.adults-count-wrapper {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+.minus-btn:hover {
+  fill: #000000;
+}
+.adults-count-input,
 .childs-count-input {
+  margin: 0;
+  display: block;
+  width: 31px;
+  text-align: center;
+  border-radius: 0;
+}
+.childs-count-wrapper {
   grid-column: 4/5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.minus-btn {
+  margin: 0;
+  margin-left: 13px;
+  padding: 5px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/modal-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+
+.plus-btn {
+  margin: 0;
+  margin-right: 13px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/modal-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
 }
 
 .tooltip {
@@ -1295,18 +1366,21 @@ body {
   border: none;
 }
 
-.modal-input:hover,
+.arrival-date-input:hover,
+.departure-date-input:hover,
 .modal-close-btn:hover {
   background-color: #e6e6e6;
 }
 
-.modal-input:focus,
+.arrival-date-input:focus,
+.departure-date-input:focus,
 .modal-close-btn:focus {
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
 }
 
-.modal-input:active {
+.arrival-date-input:active,
+.departure-date-input:active {
   background-color: #f2f2f2;
   border: 2px solid #000000;
 }
@@ -1319,4 +1393,41 @@ body {
 .modal-search-btn:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #68a2ca;
+}
+
+.minus-btn:hover::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.plus-btn:hover::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.plus-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+  transform: rotate(90deg);
+}
+
+.minus-btn:focus,
+.plus-btn:focus {
+  border: 3px solid #82b3d3;
+  border-radius: 4px;
 }
