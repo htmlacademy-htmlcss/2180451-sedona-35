@@ -1368,21 +1368,41 @@ body {
 
 .arrival-date-input:hover,
 .departure-date-input:hover,
+.adults-count-input:hover,
+.childs-count-input:hover,
+.adults-count-wrapper:hover,
+.childs-count-wrapper:hover,
 .modal-close-btn:hover {
   background-color: #e6e6e6;
 }
 
 .arrival-date-input:focus,
 .departure-date-input:focus,
+.adults-count-wrapper:focus,
+.childs-count-wrapper:focus,
 .modal-close-btn:focus {
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
 }
 
 .arrival-date-input:active,
-.departure-date-input:active {
+.departure-date-input:active,
+.adults-count-wrapper:active,
+.childs-count-wrapper:active {
   background-color: #f2f2f2;
   border: 2px solid #000000;
+}
+
+.adults-count-wrapper:hover .adults-count-input,
+.adults-count-wrapper:focus .adults-count-input {
+  background-color: #e6e6e6;
+} {
+  background-color: #e6e6e6;
+}
+
+.childs-count-wrapper:hover .childs-count-input,
+.childs-count-wrapper:focus .childs-count-input {
+  background-color: #e6e6e6;
 }
 
 .modal-search-btn:hover,
