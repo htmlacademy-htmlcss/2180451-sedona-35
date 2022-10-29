@@ -53,7 +53,7 @@ body {
 .header-logo {
   position: absolute;
   top: 0;
-  z-index: 4;
+  z-index: 1;
 }
 
 .nav-list {
@@ -83,7 +83,7 @@ body {
   width: 100%;
   top: 43px;
   border-bottom: 2px solid #756257;
-  z-index: 3;
+  z-index: 1;
 }
 
 .nav-user {
@@ -146,32 +146,16 @@ body {
 /* welcome-intro */
 .background-intro {
   margin-bottom: 69px;
-  position: relative;
   display: block;
   min-height: 485px;
   text-align: center;
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 2;
+  background:
+  url("../images/intro-lowercase.svg") no-repeat center bottom,
+  url("../images/index-background.jpg") no-repeat center;
 }
 
 .welcome-intro-img {
   margin-top: 51px;
-}
-
-.background-intro::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 57px;
-  background-image: url("../images/intro-lowercase.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
 }
 
 .main-title {
@@ -406,6 +390,258 @@ body {
   fill: #000000;
 }
 /* page-footer */
+
+/* modal-container */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 1;
+}
+
+/* .modal-container-close {
+  display: none;
+} */
+
+.modal-wrapper {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  box-sizing: border-box;
+  width: 717px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 52px;
+  top: 64px;
+  width: 52px;
+  height: 52px;
+  background-image: url("../images/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modal-field {
+  display: grid;
+  grid-template-columns: 137px 110px 1fr 110px;
+  grid-template-rows: repeat(5, auto);
+}
+
+.modal-field label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.modal-input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+}
+
+.date-error {
+  grid-column: 2/5;
+  margin: 4px 0 23px;
+  padding-left: 20px;
+  min-width: 280px;
+  align-self: flex-start;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ff5757;
+}
+
+.free-rooms {
+  grid-column: 2/5;
+  margin: 4px 0 23px;
+  padding-left: 20px;
+  min-width: 331px;
+  align-self: flex-start;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.arrival-date-input,
+.departure-date-input {
+  padding: 12px 50px 12px 20px;
+}
+
+.arrival-date,
+.departure-date,
+.adults-count,
+.childs-count {
+  align-self: center;
+}
+
+.arrival-date,
+.departure-date,
+.adults-count {
+  grid-column: 1/2;
+}
+
+.arrival-date-input,
+.departure-date-input {
+  grid-column: 2/5;
+  background-image: url("../images/modal-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+}
+
+.adults-count,
+.childs-count {
+  overflow-wrap: break-word;
+}
+
+.childs-count {
+  margin-left: 88px;
+  grid-column: 3/4;
+  max-width: 137px;
+}
+
+.adults-count-wrapper {
+  grid-column: 2/3;
+  min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.adults-count-input,
+.childs-count-input {
+  margin: 0;
+  display: block;
+  min-width: 31px;
+  min-height: 48px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.childs-count-wrapper {
+  grid-column: 4/5;
+  min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.minus-btn {
+  margin: 0;
+  margin-left: 13px;
+  padding: 5px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  background-image: url("../images/modal-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+
+.plus-btn {
+  margin: 0;
+  margin-right: 13px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  background-image: url("../images/modal-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+
+.tooltip {
+  margin-left: 10px;
+  padding: 0 13px;
+  position: relative;
+  background-image: url("../images/modal-tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-color: #83b3d3;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  padding: 15px 18px 18px 22px;
+  box-sizing: border-box;
+  top: 100%;
+  left: 50%;
+  min-width: 256px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, 15px);
+  z-index: 1;
+}
+
+.tooltip-text::after {
+  position: absolute;
+  content: "";
+  top: -9px;
+  left: 50%;
+  width: 19px;
+  height: 9px;
+  background-image: url("../images/modal-tooltip-tail.svg");
+  background-repeat: no-repeat;
+  transform: translate(-50%);
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.modal-search-btn {
+  margin: 48px 0 0 0;
+  padding: 18px 0;
+  grid-column: 1/-1;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 10px;
+}
+/* modal-container */
 
 /* main-inner */
 /* sedona-hotels */
@@ -990,6 +1226,21 @@ body {
   opacity: 0.3;
 }
 
+.control-input:hover + .control-mark-checkbox,
+.radio:hover + .control-mark-radio {
+  opacity: 0.5;
+}
+
+.control-input:focus + .control-mark-checkbox,
+.radio:focus + .control-mark-radio {
+  border: 3px solid #83b3d3;
+}
+
+.control-input:active + .control-mark-checkbox,
+.radio:active + .control-mark-radio {
+  opacity: 0.3;
+}
+
 .range-input:hover {
   background-color: #e6e6e6;
 }
@@ -1028,7 +1279,7 @@ body {
 }
 
 .range-toggle:active {
-  border: 2x solid #83b3d3;
+  border: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -1103,4 +1354,88 @@ body {
 .pagination-link-current:active {
   background-color: #f2f2f2;
   border: none;
+}
+
+.arrival-date-input:hover,
+.departure-date-input:hover,
+.adults-count-input:hover,
+.childs-count-input:hover,
+.adults-count-wrapper:hover,
+.childs-count-wrapper:hover,
+.modal-close-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.arrival-date-input:focus,
+.departure-date-input:focus,
+.adults-count-wrapper:focus,
+.childs-count-wrapper:focus,
+.modal-close-btn:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+}
+
+.arrival-date-input:active,
+.departure-date-input:active,
+.adults-count-wrapper:active,
+.childs-count-wrapper:active {
+  background-color: #f2f2f2;
+  border: 2px solid #000000;
+}
+
+.adults-count-wrapper:hover .adults-count-input,
+.adults-count-wrapper:focus .adults-count-input {
+  background-color: #e6e6e6;
+}
+
+.childs-count-wrapper:hover .childs-count-input,
+.childs-count-wrapper:focus .childs-count-input {
+  background-color: #e6e6e6;
+}
+
+.modal-search-btn:hover,
+.modal-search-btn:focus {
+  background-color: #68a2ca;
+}
+
+.modal-search-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68a2ca;
+}
+
+.minus-btn:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.plus-btn:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.plus-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 14px;
+  height: 2px;
+  background-color: #000000;
+  transform: rotate(90deg);
+}
+
+.minus-btn:focus,
+.plus-btn:focus {
+  border: 3px solid #82b3d3;
+  border-radius: 4px;
 }
