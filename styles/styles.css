@@ -53,7 +53,7 @@ body {
 .header-logo {
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 1;
 }
 
 .nav-list {
@@ -83,7 +83,7 @@ body {
   width: 100%;
   top: 43px;
   border-bottom: 2px solid #756257;
-  z-index: 3;
+  z-index: 1;
 }
 
 .nav-user {
@@ -146,32 +146,16 @@ body {
 /* welcome-intro */
 .background-intro {
   margin-bottom: 69px;
-  position: relative;
   display: block;
   min-height: 485px;
   text-align: center;
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 2;
+  background:
+  url("../images/intro-lowercase.svg") no-repeat center bottom,
+  url("../images/index-background.jpg") no-repeat center;
 }
 
 .welcome-intro-img {
   margin-top: 51px;
-}
-
-.background-intro::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 57px;
-  background-image: url("../images/intro-lowercase.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
 }
 
 .main-title {
@@ -416,7 +400,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  z-index: 4;
+  z-index: 1;
 }
 
 /* .modal-container-close {
@@ -437,6 +421,7 @@ body {
 .modal-close-btn {
   position: absolute;
   right: 52px;
+  top: 64px;
   width: 52px;
   height: 52px;
   background-image: url("../images/modal-close.svg");
@@ -459,8 +444,7 @@ body {
 .modal-field {
   display: grid;
   grid-template-columns: 137px 110px 1fr 110px;
-  grid-template-rows: repeat(3, 48px);
-  row-gap: 48px;
+  grid-template-rows: repeat(5, auto);
 }
 
 .modal-field label {
@@ -479,24 +463,24 @@ body {
   border-radius: 4px;
 }
 
-.arrival-date::after {
-  position: absolute;
-  content: "Мы не можем отправить вас в прошлое.";
-  width: 280px;
-  left: 157px;
-  top: 40px;
+.date-error {
+  grid-column: 2/5;
+  margin: 4px 0 23px;
+  padding-left: 20px;
+  min-width: 280px;
+  align-self: flex-start;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
-  color: #FF5757;
+  color: #ff5757;
 }
 
-.departure-date::after {
-  position: absolute;
-  content: "На эти даты есть свободные номера. Пока есть.";
-  width: 331px;
-  left: 157px;
-  top: 40px;
+.free-rooms {
+  grid-column: 2/5;
+  margin: 4px 0 23px;
+  padding-left: 20px;
+  min-width: 331px;
+  align-self: flex-start;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
@@ -505,7 +489,7 @@ body {
 
 .arrival-date-input,
 .departure-date-input {
-  padding: 12px 20px;
+  padding: 12px 50px 12px 20px;
 }
 
 .arrival-date,
@@ -513,7 +497,6 @@ body {
 .adults-count,
 .childs-count {
   align-self: center;
-  position: relative;
 }
 
 .arrival-date,
@@ -530,35 +513,41 @@ body {
   background-position: center right 20px;
 }
 
+.adults-count,
+.childs-count {
+  overflow-wrap: break-word;
+}
+
 .childs-count {
   margin-left: 88px;
   grid-column: 3/4;
+  max-width: 137px;
 }
 
 .adults-count-wrapper {
   grid-column: 2/3;
+  min-height: 48px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #f2f2f2;
   border-radius: 4px;
 }
-.minus-btn:hover {
-  fill: #000000;
-}
+
 .adults-count-input,
 .childs-count-input {
   margin: 0;
   display: block;
-  width: 31px;
+  min-width: 31px;
+  min-height: 48px;
   text-align: center;
   border-radius: 0;
 }
+
 .childs-count-wrapper {
   grid-column: 4/5;
+  min-height: 48px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: #f2f2f2;
   border-radius: 4px;
 }
@@ -570,6 +559,7 @@ body {
   position: relative;
   width: 20px;
   height: 20px;
+  align-self: center;
   background-image: url("../images/modal-minus.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -583,6 +573,7 @@ body {
   position: relative;
   width: 20px;
   height: 20px;
+  align-self: center;
   background-image: url("../images/modal-plus.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -608,7 +599,7 @@ body {
   box-sizing: border-box;
   top: 100%;
   left: 50%;
-  width: 256px;
+  min-width: 256px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -637,7 +628,7 @@ body {
 }
 
 .modal-search-btn {
-  margin: 0;
+  margin: 48px 0 0 0;
   padding: 18px 0;
   grid-column: 1/-1;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1415,7 +1406,7 @@ body {
 .minus-btn:hover::after {
   content: "";
   position: absolute;
-  left: 3px;
+  left: 0;
   top: 9px;
   width: 14px;
   height: 2px;
@@ -1425,7 +1416,7 @@ body {
 .plus-btn:hover::after {
   content: "";
   position: absolute;
-  left: 3px;
+  left: 0;
   top: 9px;
   width: 14px;
   height: 2px;
@@ -1435,7 +1426,7 @@ body {
 .plus-btn:hover::before {
   content: "";
   position: absolute;
-  left: 3px;
+  left: 0;
   top: 9px;
   width: 14px;
   height: 2px;

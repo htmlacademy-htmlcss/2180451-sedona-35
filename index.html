@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
     <title>Седона - лучший город в Аризоне!</title>
   </head>
 
@@ -149,19 +150,21 @@
         <button class="modal-close-btn">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <section class="modal-content">
+        <div class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-field" action="https://echo.htmlacademy.ru/" method="post">
             <label class="arrival-date" for="arrival-date-input">Дата Заезда:</label>
             <input class="arrival-date-input modal-input" type="text" value="27 апреля 2020" id="arrival-date-input" name="arrival date" required>
+            <p class="date-error">Мы не можем отправить вас в прошлое.</p>
             <label class="departure-date" for="departure-date-input">Дата Выезда:</label>
             <input class="departure-date-input modal-input" type="text" value="1 сентября 2023" id="departure-date-input" name="departure date" required>
-            <label class="adults-count" for="adult-count-input">Взрослые:</label>
+            <p class="free-rooms">На эти даты есть свободные номера. Пока есть.</p>
+            <label class="adults-count" for="adults-count-input">Взрослые:</label>
             <div class="adults-count-wrapper">
               <button class="minus-btn">
                 <span class="visually-hidden">Минус</span>
               </button>
-              <input class="adults-count-input modal-input" type="text" value="2" id="adult-count-input" name="adults count" required>
+              <input class="adults-count-input modal-input" type="text" value="2" id="adults-count-input" name="adults count" required>
               <button class="plus-btn">
                 <span class="visually-hidden">Плюс</span>
               </button>
@@ -183,7 +186,7 @@
             </div>
             <button class="modal-search-btn" type="submit">Найти</button>
           </form>
-        </section>
+        </div>
       </div>
     </div>
   </body>
