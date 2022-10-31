@@ -41,6 +41,13 @@ body {
   background-color: #f2f2f2;
 }
 
+.content-wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -62,12 +69,6 @@ body {
 }
 
 /* header */
-.page-header {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-}
-
 .header-navigation {
   display: flex;
   position: relative;
@@ -172,10 +173,7 @@ body {
 /* main */
 /* welcome-intro */
 .main-index {
-  width: 1200px;
-  margin: 0 auto;
   flex-grow: 1;
-  background-color: #ffffff;
 }
 
 .background-intro {
@@ -389,6 +387,7 @@ body {
   line-height: 24px;
   border: none;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .inner-mail-input {
@@ -413,15 +412,11 @@ body {
 
 /* page-footer */
 .page-footer {
-  width: 1200px;
-  box-sizing: border-box;
-  margin: 0 auto;
   padding: 45px 70px 35px 70px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
 }
 
 .social {
@@ -469,9 +464,9 @@ body {
   z-index: 1;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal-wrapper {
   position: relative;
@@ -521,6 +516,8 @@ body {
 }
 
 .modal-input {
+  box-sizing: border-box;
+  height: 48px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -528,6 +525,7 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .arrival-date,
@@ -582,7 +580,8 @@ body {
 
 .adults-count-wrapper,
 .childs-count-wrapper {
-  min-height: 48px;
+  height: 48px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   background-color: #f2f2f2;
@@ -594,7 +593,7 @@ body {
   margin: 0;
   display: block;
   min-width: 31px;
-  min-height: 48px;
+  height: 100%;
   text-align: center;
   border-radius: 0;
 }
@@ -602,6 +601,7 @@ body {
 .minus-btn {
   margin: 0;
   margin-left: 13px;
+  box-sizing: border-box;
   position: relative;
   width: 20px;
   height: 20px;
@@ -616,6 +616,7 @@ body {
 .plus-btn {
   margin: 0;
   margin-right: 13px;
+  box-sizing: border-box;
   position: relative;
   width: 20px;
   height: 20px;
@@ -692,12 +693,6 @@ body {
 
 /* main-inner */
 /* sedona-hotels */
-.main-inner {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-}
-
 .sedona-hotels {
   margin-bottom: 50px;
   padding: 35px 70px 70px;
@@ -1349,24 +1344,30 @@ body {
 }
 
 .left-range-input:focus {
+  padding: 9px 20px;
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .left-range-input:active {
+  padding: 10px 20px;
   background-color: #f2f2f2;
   border: 2px solid #000000;
   border-radius: 4px 0 0 4px;
 }
 
 .right-range-input:focus {
+  padding: 9px 20px;
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
   border-radius: 0 4px 4px 0;
+  outline: none;
 }
 
 .right-range-input:active {
+  padding: 10px 20px;
   background-color: #f2f2f2;
   border: 2px solid #000000;
   border-radius: 0 4px 4px 0;
@@ -1461,6 +1462,8 @@ body {
 
 .adults-count-wrapper:hover .adults-count-input,
 .adults-count-wrapper:focus .adults-count-input,
+.childs-count-wrapper:hover .childs-count-input,
+.childs-count-wrapper:focus .childs-count-input,
 .arrival-date-input:hover,
 .departure-date-input:hover,
 .adults-count-input:hover,
@@ -1482,15 +1485,15 @@ body {
 
 .arrival-date-input:active,
 .departure-date-input:active,
-.adults-count-wrapper:active,
-.childs-count-wrapper:active {
+.childs-count-wrapper:active,
+.adults-count-wrapper:active {
   background-color: #f2f2f2;
   border: 2px solid #000000;
 }
 
-.childs-count-wrapper:hover .childs-count-input,
-.childs-count-wrapper:focus .childs-count-input {
-  background-color: #e6e6e6;
+.adults-count-wrapper:active .adults-count-input,
+.childs-count-wrapper:active .childs-count-input {
+  background-color: #f2f2f2;
 }
 
 .modal-search-btn:hover,
