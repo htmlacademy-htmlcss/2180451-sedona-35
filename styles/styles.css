@@ -1510,8 +1510,8 @@ body {
 .minus-btn:hover::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: 1px;
+  top: 6px;
   width: 14px;
   height: 2px;
   background-color: #000000;
@@ -1520,8 +1520,8 @@ body {
 .plus-btn:hover::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: 1px;
+  top: 6px;
   width: 14px;
   height: 2px;
   background-color: #000000;
@@ -1530,8 +1530,8 @@ body {
 .plus-btn:hover::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: 1px;
+  top: 6px;
   width: 14px;
   height: 2px;
   background-color: #000000;
