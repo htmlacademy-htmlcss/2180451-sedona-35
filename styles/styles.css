@@ -95,19 +95,20 @@ body {
 
 .nav-item {
   position: relative;
-  margin: 20px 16px;
+  margin: 20px 0;
 }
 
-.nav-link {
-  padding: 20px 0;
+.nav-list .nav-link {
+  padding: 20px 16px;
 }
 
 .nav-link-current::after {
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
+  width: calc(100% - 32px);
   top: 43px;
+  left: 16px;
   border-bottom: 2px solid #756257;
   z-index: 1;
 }
@@ -464,9 +465,9 @@ body {
   z-index: 1;
 }
 
-/* .modal-container-close {
+.modal-container-hidden {
   display: none;
-} */
+}
 
 .modal-wrapper {
   position: relative;
@@ -1331,7 +1332,7 @@ body {
 
 .control-input:focus + .control-mark-checkbox,
 .radio:focus + .control-mark-radio {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .control-input:active + .control-mark-checkbox,
@@ -1344,7 +1345,7 @@ body {
 }
 
 .left-range-input:focus {
-  padding: 9px 20px;
+  padding: 9px 17px;
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
   border-radius: 4px 0 0 4px;
@@ -1352,14 +1353,14 @@ body {
 }
 
 .left-range-input:active {
-  padding: 10px 20px;
+  padding: 10px 18px;
   background-color: #f2f2f2;
   border: 2px solid #000000;
   border-radius: 4px 0 0 4px;
 }
 
 .right-range-input:focus {
-  padding: 9px 20px;
+  padding: 9px 17px;
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
   border-radius: 0 4px 4px 0;
@@ -1367,7 +1368,7 @@ body {
 }
 
 .right-range-input:active {
-  padding: 10px 20px;
+  padding: 10px 18px;
   background-color: #f2f2f2;
   border: 2px solid #000000;
   border-radius: 0 4px 4px 0;
@@ -1378,12 +1379,12 @@ body {
 }
 
 .range-toggle:focus {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:active {
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
