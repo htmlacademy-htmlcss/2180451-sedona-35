@@ -1478,6 +1478,7 @@ body {
 .departure-date-input:focus,
 .adults-count-wrapper:focus,
 .childs-count-wrapper:focus,
+.adults-count-input:focus .adults-count-wrapper,
 .childs-count-input:focus .childs-count-wrapper,
 .modal-close-btn:focus {
   background-color: #e6e6e6;
