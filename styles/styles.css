@@ -1478,9 +1478,10 @@ body {
 .departure-date-input:focus,
 .adults-count-wrapper:focus,
 .childs-count-wrapper:focus,
+.childs-count-input:focus .childs-count-wrapper,
 .modal-close-btn:focus {
   background-color: #e6e6e6;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .arrival-date-input:active,
@@ -1488,7 +1489,7 @@ body {
 .childs-count-wrapper:active,
 .adults-count-wrapper:active {
   background-color: #f2f2f2;
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
 .adults-count-wrapper:active .adults-count-input,
@@ -1539,6 +1540,5 @@ body {
 
 .minus-btn:focus,
 .plus-btn:focus {
-  border: 3px solid #82b3d3;
-  border-radius: 4px;
+  outline: 3px solid #82b3d3;
 }
