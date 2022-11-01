@@ -41,6 +41,13 @@ body {
   background-color: #f2f2f2;
 }
 
+.content-wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 .link {
   text-decoration: none;
   color: inherit;
@@ -62,12 +69,6 @@ body {
 }
 
 /* header */
-.page-header {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-}
-
 .header-navigation {
   display: flex;
   position: relative;
@@ -94,19 +95,20 @@ body {
 
 .nav-item {
   position: relative;
-  margin: 20px 16px;
+  margin: 20px 0;
 }
 
-.nav-link {
-  padding: 20px 0;
+.nav-list .nav-link {
+  padding: 20px 16px;
 }
 
 .nav-link-current::after {
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
+  width: calc(100% - 32px);
   top: 43px;
+  left: 16px;
   border-bottom: 2px solid #756257;
   z-index: 1;
 }
@@ -172,10 +174,7 @@ body {
 /* main */
 /* welcome-intro */
 .main-index {
-  width: 1200px;
-  margin: 0 auto;
   flex-grow: 1;
-  background-color: #ffffff;
 }
 
 .background-intro {
@@ -389,6 +388,7 @@ body {
   line-height: 24px;
   border: none;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .inner-mail-input {
@@ -413,15 +413,11 @@ body {
 
 /* page-footer */
 .page-footer {
-  width: 1200px;
-  box-sizing: border-box;
-  margin: 0 auto;
   padding: 45px 70px 35px 70px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
 }
 
 .social {
@@ -469,7 +465,7 @@ body {
   z-index: 1;
 }
 
-.modal-container-close {
+.modal-container-hidden {
   display: none;
 }
 
@@ -521,6 +517,8 @@ body {
 }
 
 .modal-input {
+  box-sizing: border-box;
+  height: 48px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -528,6 +526,7 @@ body {
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .arrival-date,
@@ -582,7 +581,8 @@ body {
 
 .adults-count-wrapper,
 .childs-count-wrapper {
-  min-height: 48px;
+  height: 48px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   background-color: #f2f2f2;
@@ -594,7 +594,7 @@ body {
   margin: 0;
   display: block;
   min-width: 31px;
-  min-height: 48px;
+  height: 100%;
   text-align: center;
   border-radius: 0;
 }
@@ -602,9 +602,10 @@ body {
 .minus-btn {
   margin: 0;
   margin-left: 13px;
+  box-sizing: border-box;
   position: relative;
   width: 20px;
-  height: 20px;
+  height: 14px;
   align-self: center;
   background-image: url("../images/modal-minus.svg");
   background-repeat: no-repeat;
@@ -616,9 +617,10 @@ body {
 .plus-btn {
   margin: 0;
   margin-right: 13px;
+  box-sizing: border-box;
   position: relative;
   width: 20px;
-  height: 20px;
+  height: 14px;
   align-self: center;
   background-image: url("../images/modal-plus.svg");
   background-repeat: no-repeat;
@@ -692,12 +694,6 @@ body {
 
 /* main-inner */
 /* sedona-hotels */
-.main-inner {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-}
-
 .sedona-hotels {
   margin-bottom: 50px;
   padding: 35px 70px 70px;
@@ -1336,7 +1332,7 @@ body {
 
 .control-input:focus + .control-mark-checkbox,
 .radio:focus + .control-mark-radio {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .control-input:active + .control-mark-checkbox,
@@ -1349,24 +1345,30 @@ body {
 }
 
 .left-range-input:focus {
+  padding: 9px 17px;
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
   border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .left-range-input:active {
+  padding: 10px 18px;
   background-color: #f2f2f2;
   border: 2px solid #000000;
   border-radius: 4px 0 0 4px;
 }
 
 .right-range-input:focus {
+  padding: 9px 17px;
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
   border-radius: 0 4px 4px 0;
+  outline: none;
 }
 
 .right-range-input:active {
+  padding: 10px 18px;
   background-color: #f2f2f2;
   border: 2px solid #000000;
   border-radius: 0 4px 4px 0;
@@ -1377,12 +1379,12 @@ body {
 }
 
 .range-toggle:focus {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:active {
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -1461,6 +1463,8 @@ body {
 
 .adults-count-wrapper:hover .adults-count-input,
 .adults-count-wrapper:focus .adults-count-input,
+.childs-count-wrapper:hover .childs-count-input,
+.childs-count-wrapper:focus .childs-count-input,
 .arrival-date-input:hover,
 .departure-date-input:hover,
 .adults-count-input:hover,
@@ -1477,20 +1481,20 @@ body {
 .childs-count-wrapper:focus,
 .modal-close-btn:focus {
   background-color: #e6e6e6;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .arrival-date-input:active,
 .departure-date-input:active,
-.adults-count-wrapper:active,
-.childs-count-wrapper:active {
+.childs-count-wrapper:active,
+.adults-count-wrapper:active {
   background-color: #f2f2f2;
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
 }
 
-.childs-count-wrapper:hover .childs-count-input,
-.childs-count-wrapper:focus .childs-count-input {
-  background-color: #e6e6e6;
+.adults-count-wrapper:active .adults-count-input,
+.childs-count-wrapper:active .childs-count-input {
+  background-color: #f2f2f2;
 }
 
 .modal-search-btn:hover,
@@ -1506,8 +1510,8 @@ body {
 .minus-btn:hover::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: 1px;
+  top: 6px;
   width: 14px;
   height: 2px;
   background-color: #000000;
@@ -1516,8 +1520,8 @@ body {
 .plus-btn:hover::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: 1px;
+  top: 6px;
   width: 14px;
   height: 2px;
   background-color: #000000;
@@ -1526,8 +1530,8 @@ body {
 .plus-btn:hover::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: 1px;
+  top: 6px;
   width: 14px;
   height: 2px;
   background-color: #000000;
@@ -1536,6 +1540,6 @@ body {
 
 .minus-btn:focus,
 .plus-btn:focus {
-  border: 3px solid #82b3d3;
-  border-radius: 4px;
+  outline: 3px solid #82b3d3;
+  outline-offset: 2px;
 }

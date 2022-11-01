@@ -11,7 +11,8 @@
 </head>
 
   <body>
-    <!-- header -->
+    <div class="content-wrapper">
+      <!-- header -->
     <header class="page-header">
       <nav class="header-navigation">
         <a class="nav-link link" href="index.html">
@@ -146,7 +147,8 @@
       </a>
     </footer>
         <!-- modal-container -->
-    <div class="modal-container modal-container-close">   <!-- для отображения модального окна нужно удалить класс modal-container-close -->
+        <!-- для отображения модального окна нужно удалить класс modal-container-close -->
+    <div class="modal-container modal-container-hidden">
       <div class="modal-wrapper">
         <button class="modal-close-btn">
           <span class="visually-hidden">Закрыть.</span>
@@ -162,11 +164,11 @@
             <p class="free-rooms">На эти даты есть свободные номера. Пока есть.</p>
             <label class="adults-count" for="adults-count-input">Взрослые:</label>
             <div class="adults-count-wrapper">
-              <button class="minus-btn">
+              <button class="minus-btn" type="button">
                 <span class="visually-hidden">Минус.</span>
               </button>
               <input class="adults-count-input modal-input" type="text" value="2" id="adults-count-input" name="adults count" required>
-              <button class="plus-btn">
+              <button class="plus-btn" type="button">
                 <span class="visually-hidden">Плюс.</span>
               </button>
             </div>
@@ -190,5 +192,7 @@
         </div>
       </div>
     </div>
+    </div>
+    <script src="modal-container.js"></script>
   </body>
 </html>
