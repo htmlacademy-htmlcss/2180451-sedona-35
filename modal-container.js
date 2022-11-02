@@ -3,7 +3,6 @@ let favHotelBtn = document.querySelector(".favorites-hotel-button");
 let modalCloseBtn = document.querySelector(".modal-close-btn");
 
 favHotelBtn.onclick = function () {
-  container.classList.contains("modal-container-hidden");
   container.classList.remove("modal-container-hidden");
   }
 
