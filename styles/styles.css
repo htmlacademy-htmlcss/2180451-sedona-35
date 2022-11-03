@@ -441,9 +441,6 @@ body {
 }
 
 .footer-phone-number {
-  display: block;
-  margin: 0;
-  padding: 0;
   max-width: 340px;
   font-size: 40px;
   line-height: 40px;
@@ -722,7 +719,6 @@ body {
   margin-bottom: 50px;
   padding: 35px 70px 70px;
   box-sizing: border-box;
-  content: "";
   min-height: 412px;
   background-image: url("../images/catalog-page/catalog-background.jpeg");
   background-repeat: no-repeat;
